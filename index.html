@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/mediasq.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>CURIOSIDADES DE TECNOLOGIA</h1>
         <p>
             Tudo oque você sempre quis saber sobre o mundo Tech, em um único lugar.
         </p>
     </header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Notícias</a>
-            <a href="#">Curiosidades</a>
-        </nav>
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+         <menu id="itens">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a href="#">Opçoes 1</a></li>
+                <li><a href="#">Opçoes 2</a></li>
+                <li><a href="#">Opçoes 3</a></li>
+            </ul>
+         </menu>
     <main>
         <article>
             <h1>HISTÓRIA DO MASCOTE DO ANDROID</h1>
@@ -133,6 +141,23 @@
     <footer>
         Site criado por <a href="https://github.com/leonardovieiralvs" target="_blank" rel="external">Leonardo Vieira</a> pelo <a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank" rel="external">Cursoemvideo</a>.
     </footer>
-        
+    
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 992) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
